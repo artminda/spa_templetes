@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<title>Boots4 :: Portfolio Template - Documentation</title>
+
+	<!-- CSS -->
+	<!-- Bootstrap core CSS -->
+	<link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Raleway:100,300,400">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:100,300,400">
+
+	<link href="assets/css/prettify.css" rel="stylesheet">
+
+	<!-- Custom styles CSS -->
+	<link href="assets/css/style.css" rel="stylesheet">
+
+</head>
+<body>
+
+	<div class="container main">
+		<div class="row">
+
+			<div class="col-md-3">
+
+				<div class="sidebar hidden-print my_affix" role="complementary" data-spy="affix" data-offset-top="100" data-offset-bottom="200">
+					<ul class="nav sidenav">
+                        <li class="active"><a href="#introduction">Introduction</a></li>
+                        <li><a href="#feature">Template Features</a></li>
+                        <li><a href="#start">Getting Started</a></li>
+                        <li><a href="#preloading">Preloading</a></li>
+                        <li><a href="#header">Home Screen</a></li>
+                        <li><a href="#closeButton">Section Closing Button</a></li>
+                        <li><a href="#aboutus">Counter in About Us Page</a></li>
+                        <li><a href="#services">Carousel in Services Page</a></li>
+                        <li><a href="#Portfolio">Portfolio</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#contact-form">Working Contact form</a></li>
+                        <li><a href="#google-map">Google Map</a></li>
+                        <li><a href="#attribution">Credits</a></li>
+                    </ul>
+				</div>
+
+			</div>
+
+			<div class="col-md-9">
+
+				<section class="header" id="introduction">
+					<h1><a href="../index.html" target="_blink">Boots4 :: Portfolio Template</a> - Documentation</h1>
+				</section>
+				<br/><br/>
+				<section class="section">
+					<div class="well-lg alert alert-success">
+						<h4>Good Day!</h4>
+						<p>Thank you for choosing our Portfolio template - <strong>Boots4</strong>. If you have any questions please feel free to submit a ticket in our website <a target="_blank" href="https://themewagon.com/my-tickets/">here</a>.</p>
+					</div>
+
+					<!-- Customization -->
+
+
+
+					<!-- template featurs -->
+
+					<h2 id="feature">Template Features</h2>
+
+					<ul>
+						<li><strong>Single Page Template</strong></li>
+						<li><strong>Easy to customize:</strong> background, content</li>
+						<li>Fully responsive</li>
+						<li>Ionicons Icons <strong>400+ icons</strong></li>
+                        <li>Owl Carousel <strong>Slider</strong></li>
+						<li>Powered by Twitter Bootstrap <strong>v4.0.0-alpha</strong></li>
+						<li>Working <strong>Contact form</strong> with validation</li>
+						<li><strong>Well Documented</strong></li>
+						<li>Clear &amp; Neat Design</li>
+						<li><strong>Accurate HTML code</strong> with comments</li>
+					</ul>
+
+					<!-- end of template featurs -->
+
+
+
+
+
+
+					<!-- getting started -->
+
+					<h2 id="start">Getting Started</h2>
+						
+					<p>Unzip the downloaded folder and find out the <strong>assets</strong>. There are all the template files in this folder. You can open the following files for viewing in browser.</p>
+					
+                    <ol>
+                        <li>
+                            <strong>css</strong>&nbsp;&mdash; folder with css files.
+                        </li>
+                        <li>
+                            <strong>img</strong>&nbsp;&mdash; folder with image files and png Icon.
+                        </li>
+                        <li>
+                            <strong>js</strong>&nbsp;&mdash; folder with Javascript files.
+                        </li>
+                        
+                        <li>
+                            <strong>index.html</strong>&nbsp;&mdash; the only html file contains all feature of this single page awesome template.
+                        </li>
+                        
+                    </ol>
+
+					<!-- end of getting started -->
+
+
+
+
+					
+                    <!-- Preloader Section -->
+                    <h2 id="preloading">Preloading Section</h2>
+                    <p>In <strong>index.html</strong> file . HTML structure of the preloading Section. This code placed just after the <strong>body</strong> tag</p>
+<pre class="prettyprint lang-basic">
+    &lt;div id="preloader" style="display: none;"&gt;
+        &lt;div class="loader"&gt;
+            &lt;span&gt;&lt;/span&gt;
+            &lt;span&gt;&lt;/span&gt;
+            &lt;span&gt;&lt;/span&gt;
+            &lt;span&gt;&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+</pre>
+                    <!-- End of preloader section -->
+
+
+
+
+
+
+
+                    <!-- HomeScreen section -->
+					<h2 id="header">Home Screen Section</h2>
+                    <p>There are four types of home page <strong>based on logo and navigation-item number</strong>. One is text logo and another is regular image logo. As a result, you will find 4 html pages.</p>
+
+                    <p>The width &amp; height of home page is decided by javascript. In script.js file you'll find the code from line 24 to 41 </p>
+					
+<pre class="prettyprint lang-basic">
+    var windowsWidth = $(window).width(),
+        windowsHeight = $(window).height();
+
+    if (windowsWidth > 767) {
+
+        $('.introduction , .menu').css({
+            width: '50%',
+            height: '100%'
+        });
+
+    } else {
+
+        $('.introduction , .menu').css({
+            width: '100%',
+            height: '50%'
+        });
+
+    }
+</pre>
+                    <p>Again menu item number can also be changed. For our customer's convenience, we provide two types of html pages. If you want to change menu item, please folow the following steps:</p>
+
+                    <ul>
+                        <li>Add or delete nav-item like following line of code:</li>
+<pre class="prettyprint lang-basic">
+    &lt;div data-url_target="YOUR_NAV_ITEM_TARGET" class="NAV_NAME_BTN menu_button"&gt;
+        &lt;img alt="" src="YOUR_IMAGE_PATH"&gt;
+        &lt;div class="mask"&gt;
+        &lt;/div&gt;
+        &lt;div class="heading"&gt;
+            &lt;i class="NAV_ITEM_ICON hidden-xs"&gt;&lt;/i&gt;
+            &lt;h2&gt;NAV_ITEM_TITLE&lt;/h2&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+</pre>
+                        <li>Add or delete content of that corresponding nav-item like other sections or pages whatever you say. The structure is like following:</li>
+<pre class="prettyprint lang-basic">
+    &lt;div id="YOUR_NAV_ITEM_TARGET" class="NAV_TITLE_CLASS container-fluid page"&gt;
+        &lt;div class="row"&gt;
+            &lt;div class="image-container col-md-3 col-sm-12"&gt;
+                &lt;div class="mask"&gt;&lt;/div&gt;
+                &lt;div class="main-heading"&gt;&lt;h1&gt;Your Page Title&lt;/h1&gt;&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="content-container"&gt;
+                &lt;p&gt;.......... (your content)&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+</pre>
+                        <li>Now, change the css from <strong>style.css</strong> according to your content. Like for 4 nav-items, we used a class called <strong>four_nav_item</strong> and for six nav items, this class name is changed to <strong>six_nav_item</strong>. And the css is used like following in line from 588 to 594</li>
+<pre class="prettyprint lang-basic">
+    .four_nav_item.menu > div {
+        height: 50%;
+    }
+
+    .six_nav_item.menu > div {
+        height: 33.33%;
+    }
+</pre>
+                        <li>Again, if you use new class name, you have to change the css as your wish</li>
+                    </ul>
+
+					<!-- end of HomeScreen -->
+
+
+
+
+
+                    <!-- Close Button -->
+
+                    <h2 id="closeButton">Close Button</h2>
+                    <p>In <strong>index.html</strong> file. This code placed just under the end of <strong>Home Screen Section</strong>. This button shows on every section to close this section and back to the<strong>Homescreen Section </strong> </p>
+<pre class="prettyprint lang-basic">
+    &lt;div class="close-btn"&gt;&lt;/div&gt;
+</pre>
+                    <p>The functionality is controlled from script js. You will find the code from line 196 to 209</p>
+<pre class="prettyprint lang-basic">
+    // Close Button, Hide Menu
+
+    $('body').on('click', '.close-btn', function () {
+        window.location.hash="";
+        $('.home-page').css({
+            display: 'block'
+        });
+        $('.introduction, .menu').animate({
+            left: 0
+        }, 1000, 'easeOutQuart');
+        $('.page').fadeOut(800);
+        removeHash ();
+        $(window).scrollTop(0);
+    });
+</pre>
+                    <!-- Close Button End-->
+
+
+
+
+
+
+					<!-- About US -->
+
+					<h2 id="aboutus">Counter in About Us Page</h2>
+					<p>You'll find counter in fun fact section of about us page. Counter will start after loading the about us page. It is also a result of some part of javascript code of script.js The code, responsible for this section, will be found from line 121 to 135</p>
+<pre class="prettyprint lang-basic">
+    $('.menu').on('click', 'div.profile-btn', function () {
+        setTimeout(function(){
+            $('.count').each(function () {
+                $(this).prop('Counter',0).animate({
+                    Counter: $(this).text()
+                }, {
+                    duration: 1500,
+                    easing: 'swing',
+                    step: function (now) {
+                        $(this).text(Math.ceil(now));
+                    }
+                });
+            });
+        }, 100);
+    });
+</pre>
+
+					<!-- end of about us Section -->
+
+
+
+
+
+
+                    <!-- owl carousel in service section -->
+
+					<h2 id="services">Carousel in Services Page</h2>
+					<p>Owl Carousel is used for partner section in service page. Owl carousel library is used for this functionality. But you can also control this carousel option from script.js. You'll find the code from line 223 to 235</p>
+<pre class="prettyprint lang-basic">
+    /*----------------------script for owl carousel sponsors---------------------*/
+
+    $("#sponsor-list").owlCarousel({
+             
+        autoPlay: 3000, //Set AutoPlay to 3 seconds
+        stopOnHover: true,
+        items : 3,
+        itemsDesktop: [1200,3],
+        itemsDesktopSmall: [991,3],
+        itemsTablet: [767,2],
+        itemsTabletSmall: [625,2],
+        itemsMobile: [479,1]
+    });
+</pre>
+
+                    <!-- end of owl carousel Services Section -->
+
+
+
+
+
+                    <!-- portfolio section -->
+
+                    <h2 id="Portfolio">Portfolio Section</h2>
+                    <p>Two javascript libraries are needed for this page. One is <a href="https://www.kunkalabs.com/mixitup/" target="_blank">MixItUp</a> and another is <a href="http://dimsemenov.com/plugins/magnific-popup/" target="_blank">Magnific Popup</a>.
+                    MixItUp is used for filtering portfolio items and after clicking one specific item, description of that item will be found for which Magnific Popup is used.</p>
+
+                    <p>The HTML structure for portfolio items is like following:</p>
+<pre class="prettyprint lang-basic">
+    &lt;div class="project-controls"&gt;
+        &lt;button class="filter" data-filter="all"&gt;All&lt;/button&gt;
+        &lt;button class="filter" data-filter=".graphic-design"&gt;Graphic Design&lt;/button&gt;
+        &lt;button class="filter" data-filter=".web-design"&gt;Web Designs&lt;/button&gt;
+        &lt;button class="filter" data-filter=".app-development"&gt;App Development&lt;/button&gt;
+    &lt;/div&gt;
+    
+    &lt;!-- Portfolio Control Buttons [ END ] --&gt;
+    
+    &lt;div id="projects" class="projet-items clearfix"&gt;
+        
+        &lt;!-- Portfolio Image --&gt;
+        
+        &lt;div class="col-lg-4 col-md-6 col-sm-4 col-xs-6 mix graphic-design"&gt;
+            &lt;div class="project"&gt;
+                &lt;a href="#portfolio-1" class="open-popup-link"&gt;
+                    &lt;img src="assets/img/portfolio/thumbs/image_1.jpg" alt=""&gt;
+                    &lt;div class="ovrly"&gt;&lt;/div&gt;
+                    &lt;div class="img-hover"&gt;
+                        &lt;div class="c-table"&gt;
+                            &lt;div class="ct-cell"&gt;
+                                &lt;i class="fa fa-search-plus" aria-hidden="true"&gt;&lt;/i&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        
+        &lt;!-- Popup Content --&gt;
+        
+        &lt;div class="mfp-hide" id="portfolio-1"&gt;
+            &lt;div class="container"&gt;
+                &lt;div class="row"&gt;
+                    &lt;div class="col-md-6 col-md-offset-3 col-xs-12"&gt;
+                        &lt;div class="popup-content"&gt;
+                            &lt;img alt="" src="assets/img/portfolio/image_1.jpg" class="img-responsive"&gt;
+                            &lt;h3&gt;PROJECT NAME&lt;/h3&gt;
+                            &lt;p&gt;
+                                Quisque in tempor sapien, .... (Project Description)
+                            &lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;    
+        &lt;/div&gt;
+        
+        &lt;!-- Single Portfolio Item [ END ] --&gt;
+</pre>
+
+                    <p>Here <strong>project-controls</strong> class is used for filtering. The <strong>data-filter</strong> attribute is the main factor. Every portfolio item have to contain a class called <strong>mix</strong> and other class for filtering same as that data-filter attribute. <br> For more, you can visit the <a href="https://www.kunkalabs.com/mixitup/docs/get-started/" target="_blank">documentation</a> of MixItUp.</p>
+
+                    <p>But you have to initialize that library from your script which is done in our script.js in line no. 137 - 141</p>
+<pre class="prettyprint lang-basic">
+    $('.menu').on('click', 'div.portfolio-btn', function () {
+        setTimeout(function(){
+            $('#projects').mixItUp();
+        }, 100);
+    });
+</pre>
+                    <p>Again, for pop-up we initialize Magnific Pop-up in line 246-250</p>
+<pre class="prettyprint lang-basic">
+    /*--------------popup------------*/
+    $('.open-popup-link').magnificPopup({
+        type:'inline',
+        midClick: true
+    });
+</pre>
+
+                    <!-- end of Portfolio section -->
+
+
+
+
+
+
+					<!-- gallery section -->
+
+					<h2 id="gallery">Gallery</h2>
+                    <p>The HTML structure for gallery is like fololowing:</p>
+<pre class="prettyprint lang-basic">
+    &lt;div class="pop-up-gallery"&gt;
+        &lt;div class="col-md-4 col-xs-12"&gt;
+            &lt;a href="assets/img/gallery/gallery1.jpg" class="popup_gallery"&gt;
+                &lt;img src="assets/img/gallery/thumb/thumb1.jpg" alt="Image 1" class="img-responsive center-block"&gt;
+            &lt;/a&gt;
+        &lt;/div&gt;
+
+        ...... (Other Gallery Items)
+    &lt;/div&gt;
+</pre>
+                    <p>Like portfolio item pop-up, here also Magnific Popup is used for pop-up the thumbnail image to actual image. The functionality is done by the line from 143 to 153 of script.js file.</p>
+<pre class="prettyprint lang-basic">
+    $('.menu').on('click', 'div.gallery-btn', function () {
+        setTimeout(function(){
+            $('.pop-up-gallery').magnificPopup({
+                delegate: 'a',
+                type: 'image',
+                gallery:{
+                    enabled:true
+                }
+            });
+        }, 100);
+    });
+</pre>
+                    <p>If you want to use more options, please follow their <a href="http://dimsemenov.com/plugins/magnific-popup/documentation.html" target="_blank">documentation</a></p>
+
+					<!-- end of gallery section -->
+
+
+
+
+
+
+					<!-- working contact form -->
+
+                    <h2 id="contact-form">Working Contact form</h2>
+                    <p>Open the file <strong>contact-form.php</strong> and in <strong>line 3 and 49</strong> enter your data:</p>
+
+                    <pre class="prettyprint lang-basic">
+// Your email
+$to = 'info@example.com';
+$subject = 'Contact Form : Boots4 - First Ever Responsive HTML5 Template With Bootstrap 4';
+                    </pre>
+<br/>
+                    <h4>If Contact form form not working</h4>
+                    <p>You need to check is PHP mail() function working.</p>
+<p>
+<textarea class="form-control" rows="4" style="widht:100%">
+<?php
+    mail('you@yourmail.com','Test mail','The mail function is working!');
+    echo 'Mail sent!';
+?>
+</textarea>
+</p>
+                    <ul>
+                    <li>Save this code as mailtest.php</li>
+                        <li>change you@yourmail.com to your e-mail address</li>
+                        <li>upload mailtest.php to your server</li>
+                        <li>open mailtest.php in your browser (http://yourwebsite.com/mailtest.php)</li>
+                        <li>check your inbox to see if a test message arrived.</li>
+                    </ul>
+                    <strong>If it works:</strong>
+
+                    <ul>
+                        <li>double-check your form script for errors (like e-mail address misspelling)</li>
+                        <li>use the same e-mail address as your form recipient</li>
+                        <li>double-check your SPAM filters and SPAM/Junk/Bulk mailboxes</li>
+                    </ul>
+
+                    <strong>If it not</strong>
+
+                    <p>Contact your host and ask them to check PHP mail() setting.</p>
+
+                    <!-- end of working contact form -->
+
+
+
+
+
+
+
+                    <!-- Google-map Section -->
+                    <h2 id="google-map">Google Map</h2>
+                    <p>Recently Google has changed the system. One must have an API key for a domain to show google map in any website of that domain. So you have to create an <strong>API key</strong> for your website to take this service of google.</p>
+
+                    <p>In our template, you will find the script for google map, added in the bottom of the file like following:</p>
+<pre class="prettyprint lang-basic">
+    &lt;script src="https://maps.googleapis.com/maps/api/js"&gt;&lt;/script&gt;
+</pre>
+
+                    <p>Please change that line like this</p>
+<pre class="prettyprint lang-basic">
+    &lt;script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"&gt;&lt;/script&gt;
+</pre>
+
+                    <p>For more to know, following links will help you more to get the API key for google map for your site. </p>
+
+                    <ul>
+                        <li><a href="https://developers.google.com/maps/documentation/javascript/get-api-key#get-an-api-key">Steps to get an API key</a></li>
+                        <li><a href="https://developers.google.com/maps/documentation/javascript/adding-a-google-map">Steps to add a marker in map</a></li>
+                    </ul>
+
+                    <p>If you want to change the map location, just change the latitude and longitude of the script file added at the last in html pages.</p>
+<pre class="prettyprint lang-basic">
+    &lt;script&gt;
+      function initMap() {
+        var location = {lat: YOUR_LATITUDE, lng: YOUR_LONGITUDE};
+        var map = new google.maps.Map(document.getElementById('map-canvas'), {
+            zoom: 14,
+            center: location,
+            scrollwheel: false,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        });
+        var marker = new google.maps.Marker({
+            position: location,
+            map: map,
+            title:"Boots4 Office"
+        });
+    }
+    &lt;/script&gt;
+</pre>
+                    <!-- end of Google-map Section -->
+
+
+
+
+
+
+
+					<!-- attributions -->
+
+					<h2 id="attribution">Credits</h2>
+					<p>Following libraries and plugins are used in Women Entrepreneur template:</p>
+					<ul>
+                        <li><a href="https://jquery.com/" target="_blank">jQuery</a></li>
+                        <li><a href="http://getbootstrap.com" target="_blank">Bootstrap</a></li>
+                        <li><a href="https://www.google.com/fonts" target="_blank">Google Fonts</a> </li>
+                        <li><a href="http://ionicons.com/" target="_blank">ionicons</a></li>
+                        <li><a href="http://fontawesome.io/" target="_blank">Font Awesome</a></li>
+                        <li><a href="http://www.owlcarousel.owlgraphic.com/index.html" target="_blank">Owl Carousel 2</a></li>
+                        <li><a href="http://dimsemenov.com/plugins/magnific-popup/" target="_blank">Magnific Popup</a></li>
+                        <li><a href="https://www.kunkalabs.com/mixitup/" target="_blank">MixItUp</a></li>
+                        <li><a href="https://unsplash.com/" target="_blank">Unsplash</a></li>
+                    </ul>
+
+					<!-- end of attributions -->
+
+				</section>
+
+			</div>
+		</div>
+	</div>
+
+	<!-- Javascript files -->
+	<!-- jQuery -->
+	<script src="assets/js/jquery-1.11.0.min.js"></script>
+	<!-- Bootstrap JS -->
+	<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+	<!--HL -->
+	<script src="assets/js/prettify/prettify.js"></script>
+	<!-- Custom scripts -->
+	<script src="assets/js/custom.js"></script>
+
+</body>
+</html>
