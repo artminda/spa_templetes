@@ -1,2 +1,2 @@
-# spa_templetes
+# _templetes
 rwd
